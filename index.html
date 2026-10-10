@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="vi">
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1" />
+      <title>Trang chủ học tập</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap"
+         rel="stylesheet"
+      />
+      <link rel="stylesheet" href="style.css" />
+   </head>
+   <body>
+      <header class="topbar"><a href="#" id="homeLink">🚀 Trang chủ</a></header>
+      <main class="container" id="homeView">
+         <section class="program">
+            <div class="heading">
+               <h2>⭐ Chương trình IC3 SPARK GS6</h2>
+               <span>Tiểu học</span>
+            </div>
+            <div class="levels">
+               <button class="level yellow" data-level="spark-1">
+                  🌱<b>Level 1</b></button
+               ><button class="level orange" data-level="spark-2">
+                  🌿<b>Level 2</b></button
+               ><button class="level red" data-level="spark-3">
+                  🌳<b>Level 3</b>
+               </button>
+            </div>
+         </section>
+         <section class="program">
+            <div class="heading">
+               <h2>🧩 Chương trình IC3 GS6</h2>
+               <span>THCS</span>
+            </div>
+            <div class="levels">
+               <button class="level teal" data-level="gs-1">
+                  🥇<b>Level 1</b></button
+               ><button class="level green" data-level="gs-2">
+                  🥈<b>Level 2</b></button
+               ><button class="level mint" data-level="gs-3">
+                  🥉<b>Level 3</b>
+               </button>
+            </div>
+         </section>
+         <section>
+            <h2>🌐 Web hỗ trợ học tập</h2>
+            <div class="support">
+               <a class="k12" href="https://k12online.vn/" target="_blank"
+                  >📚<b>K12 Online</b></a
+               >
+               <div class="guide">
+                  <h3>📝 Hướng dẫn</h3>
+                  <ol>
+                     <li>Bấm vào K12 Online để mở trang Web.</li>
+                     <li>
+                        Đăng nhập bằng tài khoản và mật khẩu được cung cấp.
+                     </li>
+                     <li>
+                        Kéo xuống cuối trang và chọn chương trình thích hợp.
+                     </li>
+                     <li>Chọn “Vào học” để bắt đầu bài học.</li>
+                     <li>Chọn “Câu hỏi đánh giá” để làm bài.</li>
+                  </ol>
+                  <p>
+                     🔑 <b>Mật khẩu chung:</b> <code>Viettel2025@</code>
+                     <button id="copyPass">Sao chép</button>
+                  </p>
+               </div>
+            </div>
+         </section>
+      </main>
+      <main id="detailView" class="container hidden">
+         <div class="banner" id="banner">
+            <div class="banner-row">
+               <button id="back">← Quay lại</button
+               ><button id="materials">▤ Tài liệu</button>
+            </div>
+            <h1>
+               <span id="detailEmoji">🌱</span>
+               <span id="detailTitle">IC3 SPARK GS6 - Level 1</span>
+            </h1>
+         </div>
+         <div id="topics"></div>
+      </main>
+      <section id="gameView" class="game hidden">
+         <header class="game-head">
+            <div>
+               🐝 <b>Ong Vàng vượt mê cung phần cứng</b
+               ><small
+                  >IC3 GS6 Spark Level 1 · Bài 1–2: Phần cứng máy tính</small
+               >
+            </div>
+            <div>
+               <button id="gameHome" title="Trang chủ">⌂</button>
+               <button id="sound" title="Âm thanh">🔊</button>
+            </div>
+         </header>
+         <div id="intro" class="game-intro">
+            <h1>Chọn mê cung để Ong Vàng bắt đầu bay</h1>
+            <p>
+               Trả lời đúng, Ong Vàng tiến một chốt và thắp sáng đoạn mạch phía
+               sau. Trả lời sai hoặc hết giờ, Ong Vàng lùi lại một chốt và đoạn
+               mạch đó tắt. Chỉ khi đi hết đường mạch, Ong Vàng mới chạm được
+               con chip kho báu.
+            </p>
+            <div class="player">
+               <label for="playerName">Tên học sinh hoặc nhóm</label
+               ><input
+                  id="playerName"
+                  placeholder="Ví dụ: Nhóm 1 – Minh và Lan"
+                  maxlength="32"
+               /><button id="scoresButton">
+                  ▤ Bảng thành tích (<span id="scoreCount">0</span>)
+               </button>
+            </div>
+            <div class="maze-choices">
+               <button data-maze="0" class="maze m1">
+                  <span>LEVEL 1</span><b>Mê cung mạch đồng</b
+                  ><small>10 câu, 30 giây mỗi câu<br />Mức độ: Nhận biết</small
+                  ><i>〰️〰️〰️</i><em data-record="0">Chưa có kỷ lục</em
+                  ><strong>Bắt đầu bay ›</strong></button
+               ><button data-maze="1" class="maze m2">
+                  <span>LEVEL 2</span><b>Mê cung xoắn ốc</b
+                  ><small>12 câu, 25 giây mỗi câu<br />Mức độ: Thông hiểu</small
+                  ><i>〰️〰️〰️</i><em data-record="1">Chưa có kỷ lục</em
+                  ><strong>Bắt đầu bay ›</strong></button
+               ><button data-maze="2" class="maze m3">
+                  <span>LEVEL 3</span><b>Mê cung nhánh rẽ</b
+                  ><small>14 câu, 20 giây mỗi câu<br />Mức độ: Vận dụng</small
+                  ><i>〰️〰️〰️</i><em data-record="2">Chưa có kỷ lục</em
+                  ><strong>Bắt đầu bay ›</strong>
+               </button>
+            </div>
+            <p class="footnote">
+               Trả lời càng nhanh, điểm càng cao. Đúng liền 3 câu trở lên được
+               thưởng thêm. Bấm phím A, B, C, D để chọn đáp án và Enter để sang
+               câu tiếp theo.
+            </p>
+         </div>
+         <div id="play" class="play hidden">
+            <div class="play-head">
+               <button id="quit">← Chọn mê cung</button
+               ><b id="levelLabel">LEVEL 1</b
+               ><span
+                  >⭐ <b id="score">0</b>　❤️ <b id="lives">3</b>　⏱
+                  <b id="timer">30</b>s</span
+               >
+            </div>
+            <div class="track">
+               <div id="bee">🐝</div>
+               <div id="trackNodes"></div>
+               <span class="goal">💎</span>
+            </div>
+            <div class="quiz">
+               <div class="q-meta">
+                  <span id="qCount">CÂU 1/10</span
+                  ><span id="streak">🔥 Chuỗi đúng: 0</span>
+               </div>
+               <h2 id="question"></h2>
+               <div id="answers" class="answers"></div>
+               <div class="feedback-row">
+                  <p id="feedback">Chọn một đáp án để Ong Vàng bay tiếp!</p>
+                  <button id="next" disabled>Tiếp theo →</button>
+               </div>
+            </div>
+         </div>
+         <div id="result" class="result hidden">
+            <div>🐝</div>
+            <h1 id="resultTitle">Hoàn thành mê cung!</h1>
+            <p id="resultText"></p>
+            <strong id="resultScore">0</strong><small>ĐIỂM CỦA BẠN</small>
+            <p>
+               <button id="retry">Chơi lại</button>
+               <button id="chooseAgain">Chọn mê cung khác</button>
+            </p>
+         </div>
+         <div id="scoreboard" class="scoreboard hidden">
+            <h2>🏆 Bảng thành tích <button id="closeScores">Đóng ✕</button></h2>
+            <div id="scoreRows"></div>
+         </div>
+      </section>
+      <div id="toast" class="toast" role="status"></div>
+      <script src="script.js"></script>
+   </body>
+</html>
